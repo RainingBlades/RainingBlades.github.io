@@ -9,7 +9,7 @@ class Player {
         this.collisions = [];
         this.sprite = new Image();
         this.sprite.src = "player.png";
-        this.speed = 4;
+        this.speed = 8;
         this.updateKey = this.updateKey.bind(this);
         this.releaseKey = this.releaseKey.bind(this);
         this.move = this.move.bind(this);
@@ -56,7 +56,7 @@ class Player {
     }
     draw(scene) {
         this.move();
-        scene.drawImage(this.sprite, this.x - 50, this.y - 50, 100, 100);
+        scene.drawImage(this.sprite, this.x - 100, this.y - 100, 200, 200);
     }
 }
 
@@ -80,24 +80,24 @@ class Stats {
     }
     static draw(scene) {
         scene.fillStyle = "black";
-        scene.font = "bold 30px Papyrus";
-        scene.fillText("Stats:", 10, 30);
-        scene.font = "26px Papyrus";
-        scene.fillText(`Up: ${player.keys["ArrowUp"]}`, 10, 60);
-        scene.fillText(`Down: ${player.keys["ArrowDown"]}`, 10, 90);
-        scene.fillText(`Left: ${player.keys["ArrowLeft"]}`, 10, 120);
-        scene.fillText(`Right: ${player.keys["ArrowRight"]}`, 10, 150);
-        scene.fillText(`Collisions: ${player.collisions.length}`, 10, 180);
+        scene.font = "bold 60px Papyrus";
+        scene.fillText("Stats:", 20, 60);
+        scene.font = "50px Papyrus";
+        scene.fillText(`Up: ${player.keys["ArrowUp"]}`, 20, 120);
+        scene.fillText(`Down: ${player.keys["ArrowDown"]}`, 20, 180);
+        scene.fillText(`Left: ${player.keys["ArrowLeft"]}`, 20, 240);
+        scene.fillText(`Right: ${player.keys["ArrowRight"]}`, 20, 300);
+        scene.fillText(`Collisions: ${player.collisions.length}`, 20, 360);
     }
 }
 
-const player = new Player(500, 300);
+const player = new Player(1000, 600);
 const borderLeft = new Obstacle(50, 300, 10, 600);
 const obstacles = [borderLeft];
 
 function drawBackground() {
     scene.fillStyle = "teal";
-    scene.fillRect(0, 0, 1000, 600);
+    scene.fillRect(0, 0, 2000, 1200);
 }
 
 function drawObjects() {
@@ -107,7 +107,7 @@ function drawObjects() {
 }
 
 function drawScene() {
-    scene.clearRect(0, 0, 1000, 600);
+    scene.clearRect(0, 0, 2000, 1200);
     drawBackground();
     drawObjects();
 }
