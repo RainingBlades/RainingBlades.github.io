@@ -1,0 +1,64 @@
+body {
+    background-image: url("starrySky.jpg");
+    color: #ffffff;
+}
+
+header {
+    background-color: #00e6e6;
+    color: #00994d;
+    text-align: center;
+    text-decoration: underline;
+    font-family: papyrus;
+    font-size: 2em;
+}
+
+footer {
+    background-color: #ffaa33;
+    color: #00994d;
+    text-align: center;
+    font-family: Arial;
+    width: 100%;
+}
+
+ul {
+    list-style-position: inside;
+    list-style-type: square;
+}
+
+nav {
+    margin: .5em 1em;
+}
+
+main {
+    background-color: teal;
+    border: 1em ridge #80ffff;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1.5em;
+    text-align: center;
+    box-shadow: 0px 0px 20px 15px white;
+    width: 80%;
+}
+
+canvas {
+    border: .5em ridge #80ffff;
+    width: 90%;
+}
+
+.floatImgLeft {
+    float: left;
+    margin-right: .5em;
+    border: .5em ridge #80ffff;
+}
+
+.floatImgRight {
+    float: right;
+    margin-left: .5em;
+    border: .5em ridge #80ffff;
+}
+
+.floatImgCenter {
+    margin-left: auto;
+    margin-right: auto;
+    border: .5em ridge #80ffff;
+}
